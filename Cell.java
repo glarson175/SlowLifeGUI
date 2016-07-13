@@ -9,7 +9,9 @@ public class Cell extends JButton {
     private int _maxSize = 10000;
     
     public Cell() {
+    	
 	super(" ");
+	
 	setFont(new Font("Courier", Font.PLAIN, 12));
 	addActionListener(new CellButtonListener());
     }
@@ -36,18 +38,14 @@ public class Cell extends JButton {
     }
 
     public String toString() {
-	String toReturn = new String("");
-	String currentState = getText();
-	for (int j = 0; j < _maxSize; j++) {
-	    toReturn += currentState;
-	}
-	if (toReturn.substring(0,1).equals("X")) {
-	    return toReturn.substring(0,1);
-	} else {
-	    return ".";
-	}
-
+    	String currentState = getText();
+    	if (currentState.equals("X")) {
+    	    return currentState;
+    	} else {
+    	    return ".";
+    	}
     }
+   
     
     public void setAlive(boolean a) {
 	// note that "if (a)" and "if (a == true)"
