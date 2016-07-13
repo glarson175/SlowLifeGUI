@@ -217,6 +217,7 @@ public class MainPanel extends JPanel {
     	    calculateNextIteration();
     	}
     	
+    	
         }
 
     /**
